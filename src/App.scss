@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+#calculator {
+  height: 60vh;
+  width: 25vw;
+  min-width: 300px;
+  background-color: black;
+  border-radius: 10px;
+  box-sizing: content-box;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+
+  #output {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: auto 5px;
+    text-align: right;
+    font-size: 1.4rem;
+
+    #formula {
+      color: #f16100;
+    }
+  }
+
+  button {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #223434;
+    color: white;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  #clear {
+    background-color: #f16100;
+    color: black;
+  }
+
+  #divide, #multiply, #add, #subtract, #equals {
+    background-color: #f16100;
+    color: black;
+  }
+}
