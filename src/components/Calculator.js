@@ -60,6 +60,7 @@ function Calculator(props) {
 
     const handleCalc = () => {
       const result = evaluate(formula);
+      setFormula(result);
       setDisplay(result);
       setLastInput("=");
     }
